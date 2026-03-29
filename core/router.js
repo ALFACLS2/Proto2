@@ -1,11 +1,11 @@
-import { registry } from "./registry.js";
+import { registry } from './registry.js';
 
-export function resolveRoute(path) {
-  return registry.find(r => r.route === path);
-}
-const BASE = "/Proto2"; // ganti sama nama repo lo
+export async function router() {
+  const path = window.location.pathname;
 
-export function resolveRoute(path) {
-  const cleanPath = path.replace(BASE, "") || "/";
-  return registry.find(r => r.route === cleanPath);
+  const match = registry.find(r => r.route === path) 
+              || registry.find(r => r.route === '/lowongan');
+
+  const module = await import(match.entry);
+  module.render();
 }
