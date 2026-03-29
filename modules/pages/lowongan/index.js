@@ -12,6 +12,7 @@ export function render() {
 
     setTimeout(() => {
       btn.classList.remove('active');
+      window.location.hash = '#faq';
     }, 200);
   });
 }
