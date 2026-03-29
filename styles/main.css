@@ -1,0 +1,144 @@
+@import "./variables.css";
+
+/* ================= BASE ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-dark);
+  overflow: hidden;
+}
+
+/* ================= BACKGROUND ================= */
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-image) center/cover;
+  filter: blur(14px) brightness(0.45);
+  transform: scale(1.1);
+}
+
+/* ================= CARD ================= */
+.card {
+  width: 360px;
+  border-radius: 25px;
+  padding: 15px;
+  color: var(--text-light);
+
+  background: var(--glass-bg);
+  backdrop-filter: blur(25px);
+
+  border: 1px solid var(--glass-border);
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 240px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  background: var(--profile-image) center/cover;
+  filter: grayscale(100%);
+}
+
+/* ================= TEXT ================= */
+h1 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.sub {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+
+/* ================= BUTTON ================= */
+.btn {
+  display: block;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-light);
+
+  background: var(--btn-bg);
+  border: 1px solid var(--btn-border);
+
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+  transform: scale(1.03);
+}
+
+.primary {
+  background: var(--primary-gradient);
+  border: none;
+}
+
+/* ================= SEPARATOR ================= */
+.separator {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: 15px 0;
+}
+
+/* ================= SOCIAL ================= */
+.social {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.social .btn,
+.social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 48px;
+  border-radius: 12px;
+
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+
+  text-decoration: none;
+  color: var(--text-light);
+
+  transition: all 0.25s ease;
+}
+
+.social .btn:hover,
+.social a:hover {
+  background: var(--btn-hover);
+  transform: scale(1.05);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+
+  text-align: center;
+  font-size: 11px;
+  opacity: 0.7;
+}
