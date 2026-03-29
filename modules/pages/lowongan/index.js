@@ -1,11 +1,18 @@
-import { view } from "./view.js";
+import { view } from './view.js';
+import { layout } from '../../../components/layouts/default.js';
 
-export function mount(el) {
-  el.innerHTML = view();
+export function render() {
+  const app = document.getElementById('app');
+  app.innerHTML = layout(view());
 
-  document.getElementById("faqBtn")
-    .addEventListener("click", () => {
-      history.pushState({}, "", "/faq");
-      window.dispatchEvent(new Event("popstate"));
-    });
+  const btn = document.getElementById('faqBtn');
+
+  btn.addEventListener('click', () => {
+    btn.classList.add('active');
+
+    setTimeout(() => {
+      btn.classList.remove('active');
+      window.location.pathname = '/faq';
+    }, 200);
+  });
 }
