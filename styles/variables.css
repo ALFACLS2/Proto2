@@ -1,0 +1,18 @@
+:root {
+  /* IMAGE */
+  --bg-image: url('https://res.cloudinary.com/dprt1m1wl/image/upload/v1774676745/ChatGPT_Image_Mar_28_2026_12_44_07_PM_uiti48.png');
+  --profile-image: url('https://res.cloudinary.com/dprt1m1wl/image/upload/v1774676745/ChatGPT_Image_Mar_28_2026_12_44_07_PM_uiti48.png');
+
+  /* COLORS */
+  --bg-dark: #0d0d0d;
+  --text-light: #ffffff;
+
+  --glass-bg: rgba(255,255,255,0.05);
+  --glass-border: rgba(255,255,255,0.1);
+
+  --btn-bg: rgba(255,255,255,0.08);
+  --btn-border: rgba(255,255,255,0.15);
+  --btn-hover: rgba(255,255,255,0.2);
+
+  --primary-gradient: linear-gradient(90deg, #ff7a18, #ff3d81);
+}
