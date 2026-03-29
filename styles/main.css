@@ -23,12 +23,22 @@ body {
 
 /* ================= BACKGROUND ================= */
 .bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: var(--bg-image) center/cover;
-  filter: blur(14px) brightness(0.45);
-  transform: scale(1.1);
+  position: fixed; /* FIX utama */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: blur(20px) brightness(0.5);
+  transform: scale(1.05); /* kecilin dikit biar ga geser */
+
+  z-index: -1; /* biar di belakang semua */
+}
 }
 
 /* ================= CARD ================= */
