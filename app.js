@@ -1,3 +1,3 @@
-import { initRouter } from "./core/router.js";
+import { initApp } from "./core/loader.js";
 
-initRouter();
+initApp();
