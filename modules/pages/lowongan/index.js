@@ -12,7 +12,6 @@ export function render() {
 
     setTimeout(() => {
       btn.classList.remove('active');
-      window.location.pathname = '/faq';
     }, 200);
   });
 }
