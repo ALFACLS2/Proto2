@@ -1,3 +1,3 @@
-import { initApp } from "./core/loader.js";
+import { router } from './core/router.js';
 
-initApp();
+window.addEventListener('DOMContentLoaded', router);
