@@ -1,4 +1,8 @@
-@import "./variables.css";
+/* ================= CONFIG ================= */
+:root {
+  --bg-image: url('https://res.cloudinary.com/dprt1m1wl/image/upload/v1774676745/ChatGPT_Image_Mar_28_2026_12_44_07_PM_uiti48.png');
+  --profile-image: url('https://res.cloudinary.com/dprt1m1wl/image/upload/v1774676745/ChatGPT_Image_Mar_28_2026_12_44_07_PM_uiti48.png');
+}
 
 /* ================= BASE ================= */
 * {
@@ -13,7 +17,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--bg-dark);
+  background: #0d0d0d;
   overflow: hidden;
 }
 
@@ -32,12 +36,12 @@ body {
   width: 360px;
   border-radius: 25px;
   padding: 15px;
-  color: var(--text-light);
+  color: white;
 
-  background: var(--glass-bg);
+  background: rgba(255,255,255,0.05);
   backdrop-filter: blur(25px);
 
-  border: 1px solid var(--glass-border);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 /* ================= HERO ================= */
@@ -75,22 +79,21 @@ h1 {
   margin-bottom: 10px;
   text-align: center;
   text-decoration: none;
-  color: var(--text-light);
+  color: white;
 
-  background: var(--btn-bg);
-  border: 1px solid var(--btn-border);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
 
   transition: all 0.25s ease;
-  cursor: pointer;
 }
 
 .btn:hover {
-  background: var(--btn-hover);
+  background: rgba(255,255,255,0.2);
   transform: scale(1.03);
 }
 
 .primary {
-  background: var(--primary-gradient);
+  background: linear-gradient(90deg, #ff7a18, #ff3d81);
   border: none;
 }
 
@@ -117,19 +120,29 @@ h1 {
   height: 48px;
   border-radius: 12px;
 
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
 
   text-decoration: none;
-  color: var(--text-light);
+  color: white;
 
   transition: all 0.25s ease;
 }
 
 .social .btn:hover,
 .social a:hover {
-  background: var(--btn-hover);
+  background: rgba(255,255,255,0.15);
   transform: scale(1.05);
+}
+
+.social .btn.active {
+  background: linear-gradient(90deg, #ff7a18, #ff3d81);
+}
+
+/* ================= ICON ================= */
+.icon {
+  width: 16px;
+  margin-right: 6px;
 }
 
 /* ================= FOOTER ================= */
@@ -141,4 +154,34 @@ h1 {
   text-align: center;
   font-size: 11px;
   opacity: 0.7;
+}
+
+.creator-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  margin-top: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 11px;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.creator-link:hover {
+  opacity: 1;
+}
+
+/* IG ICON */
+.ig-icon {
+  width: 14px;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes clickPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
 }
